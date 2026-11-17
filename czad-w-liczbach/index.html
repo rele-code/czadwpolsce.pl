@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Czad w liczbach 2018–2025: dane KG PSP wg powiatów</title>
+<meta name="description" content="Zdarzenia z tlenkiem węgla w Polsce w latach 2018–2025 według Komendy Głównej PSP: liczby dla kraju, województw, powiatów i rodzajów budynków.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://czadwpolsce.pl/czad-w-liczbach/">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#B23B17">
+<link rel="preload" href="../static/fonty/portal-tytul.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../static/fonty/portal-tekst.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23B23B17'/%3E%3Cpath d='M9 25V12h5v13M8 9.5c2-2.5 5-2.5 7 0s5 2.5 7 0' fill='none' stroke='%23fff' stroke-width='2.6'/%3E%3Cpath d='M17 25h7' stroke='%23fff' stroke-width='2.6'/%3E%3C/svg%3E">
+<style>@font-face { font-family: 'Czad Portal Tytul'; src: url(../static/fonty/portal-tytul.woff2) format('woff2'); font-weight: 500 800; font-style: normal; font-display: swap; } @font-face { font-family: 'Czad Portal Tekst'; src: url(../static/fonty/portal-tekst.woff2) format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; } @font-face { font-family: 'Czad Portal Tekst'; src: url(../static/fonty/portal-tekst-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; } :root { --akcent: #B23B17; --akcent-ciemny: #8E2E10; --akcent-tlo: #FBEEE8; --tekst: #1D2023; --tekst-2: #2C3034; --szary: #585D62; --linia: #DEDAD3; --tlo: #F4F3F0; --tlo-2: #EAE8E3; --bialy: #FFFFFF; --stopka: #1D2023; --stopka-tekst: #E9E6E1; --stopka-szary: #A9AEB3; --stopka-akcent: #E8916F; --f-tytul: 'Czad Portal Tytul', 'Arial Narrow', Arial, sans-serif; --f-tekst: 'Czad Portal Tekst', Arial, Helvetica, sans-serif; --margines: 1rem; --ram: 81rem; --kolumna-tekstu: 45rem; color-scheme: light; } *, *::before, *::after { box-sizing: border-box; } html { -webkit-text-size-adjust: 100%; } body { margin: 0; background: var(--bialy); color: var(--tekst-2); font: 400 1.0625rem/1.68 var(--f-tekst); min-height: 100vh; display: flex; flex-direction: column; overflow-wrap: break-word; } img { max-width: 100%; height: auto; display: block; } svg { max-width: 100%; } a { color: var(--akcent); text-decoration-thickness: 1px; text-underline-offset: .16em; } a:hover { color: var(--akcent-ciemny); text-decoration-thickness: 2px; } :focus-visible { outline: 3px solid var(--akcent); outline-offset: 2px; } .pomin { position: absolute; left: -999rem; top: 0; background: var(--tekst); color: var(--bialy); padding: .6rem 1rem; z-index: 10; } .pomin:focus { left: 0; } .ram { width: 100%; max-width: calc(var(--ram) + 2 * var(--margines)); margin: 0 auto; padding: 0 var(--margines); } .gora { background: var(--tlo); border-bottom: 1px solid var(--linia); font-size: .78rem; line-height: 1.4; color: var(--szary); } .gora-ram { display: flex; justify-content: space-between; gap: 1.5rem; padding-top: .45rem; padding-bottom: .45rem; } .gora p { margin: 0; } .wlasciciel a { color: var(--tekst); font-weight: 600; } .gora-zasada { display: none; } .winieta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-top: .9rem; padding-bottom: .9rem; } .logo { display: inline-flex; align-items: center; gap: .55rem; flex: none; background: var(--akcent); color: var(--bialy); text-decoration: none; padding: .45rem .85rem .5rem .6rem; } .logo:hover { color: var(--bialy); background: var(--akcent-ciemny); } .logo-znak { width: 1.45rem; height: auto; fill: none; stroke: var(--bialy); stroke-width: 3.6; stroke-linecap: square; flex: none; } .logo-napis { display: flex; align-items: baseline; gap: .35rem; font-family: var(--f-tytul); text-transform: uppercase; line-height: 1; white-space: nowrap; } .logo-czad { font-weight: 800; font-size: 1.55rem; letter-spacing: .01em; } .logo-wpolsce { font-weight: 500; font-size: 1.55rem; letter-spacing: .02em; } .winieta-opis { display: none; margin: 0; max-width: 25rem; font-size: .9rem; line-height: 1.45; color: var(--szary); } .winieta-opis strong { color: var(--tekst); } .menu { border-top: 1px solid var(--linia); border-bottom: 1px solid var(--linia); background: var(--bialy); } .menu .ram { padding: 0; } .menu ul { list-style: none; margin: 0; padding: 0; display: flex; overflow-x: auto; scrollbar-width: none; white-space: nowrap; } .menu ul::-webkit-scrollbar { display: none; } .menu li { flex: none; border-right: 1px solid var(--linia); } .menu li:first-child { border-left: 1px solid var(--linia); } .menu a { display: block; padding: .8rem 1rem .75rem; text-align: center; font: 600 .95rem/1.3 var(--f-tytul); color: var(--tekst); text-decoration: none; box-shadow: inset 0 -3px transparent; } .menu a:hover { background: var(--tlo); color: var(--akcent); } .menu a[aria-current="page"] { color: var(--akcent); box-shadow: inset 0 -4px var(--akcent); } .tresc { flex: 1 0 auto; background: var(--tlo); padding-bottom: 2.5rem; } .pas-okruszki { padding: .8rem 0; } .okruszki { display: flex; flex-wrap: nowrap; align-items: baseline; gap: .55rem; font-size: .8rem; line-height: 1.4; color: var(--szary); min-width: 0; } .okruszki a { color: var(--akcent); text-decoration: none; flex: none; } .okruszki a:hover { text-decoration: underline; } .okruszki > * + *::before { content: '›'; margin-right: .55rem; color: var(--szary); } .okruszki span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; color: var(--tekst); } .uklad { display: block; } .art { background: var(--bialy); margin: 0 calc(-1 * var(--margines)); padding: 1.3rem var(--margines) 2rem; } .art-glowa { display: flex; flex-direction: column; } .art-glowa > .dzial { order: -1; } .art-glowa > *, .art-dalej > * { max-width: var(--kolumna-tekstu); } .art-glowa > .zdjecie, .art-dalej > .zdjecie, .art-dalej > table, .art-glowa > table, .art-dalej > .tabela-tytul, .art-dalej > .tabela-zrodlo { max-width: none; } .dzial { margin: 0 0 .5rem; padding-left: .55rem; border-left: 4px solid var(--akcent); font: 700 .78rem/1.25 var(--f-tytul); letter-spacing: .07em; text-transform: uppercase; color: var(--akcent); } h1 { margin: .1rem 0 .65rem; font: 800 2rem/1.08 var(--f-tytul); letter-spacing: -.012em; color: var(--tekst); max-width: 28ch; } .meta { margin: 0 0 1.1rem; padding-bottom: .8rem; border-bottom: 1px solid var(--linia); font-size: .82rem; color: var(--szary); } .meta time { color: var(--tekst); font-weight: 600; } .lead { margin: 0 0 1.2rem; font-size: 1.12rem; line-height: 1.55; font-weight: 600; color: var(--tekst); } p { margin: 0 0 1.05rem; } h2 { margin: 2.2rem 0 .8rem; font: 700 1.5rem/1.18 var(--f-tytul); color: var(--tekst); letter-spacing: -.005em; } .art-dalej > h2::before { content: ''; display: block; width: 2.6rem; height: 4px; background: var(--akcent); margin-bottom: .6rem; } h3 { margin: 1.6rem 0 .5rem; font: 700 1.15rem/1.25 var(--f-tytul); color: var(--tekst); } ul, ol { padding-left: 1.3rem; margin: 0 0 1.1rem; } li { margin-bottom: .35rem; } li::marker { color: var(--akcent); } strong, b { color: var(--tekst); font-weight: 700; } .zdjecie { margin: .3rem 0 1.5rem; } .zdjecie img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--tlo-2); } .zdjecie figcaption { padding: .5rem 0 .6rem; border-bottom: 1px solid var(--linia); font-size: .8rem; line-height: 1.45; color: var(--szary); } .fot { display: inline-block; font-size: .72rem; color: var(--szary); } .fot a { color: var(--szary); } .zdjecie .fot { margin-left: .3rem; } dl { margin: 0 0 1.4rem; padding: .8rem 1rem; background: var(--tlo); border-left: 4px solid var(--akcent); display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .3rem 1rem; font-size: .9rem; line-height: 1.45; } dt { font: 700 .76rem/1.6 var(--f-tytul); text-transform: uppercase; letter-spacing: .06em; color: var(--szary); } dd { margin: 0; color: var(--tekst); } .notka { padding: .75rem 1rem; background: var(--akcent-tlo); border-left: 4px solid var(--akcent); font-size: .9rem; line-height: 1.5; color: var(--tekst); } table { width: 100%; border-collapse: collapse; margin: .6rem 0 1.6rem; font-size: .92rem; line-height: 1.4; font-variant-numeric: tabular-nums lining-nums; } th { padding: .6rem .7rem; background: var(--tekst); color: var(--bialy); text-align: left; vertical-align: bottom; font: 600 .82rem/1.3 var(--f-tytul); } td { padding: .55rem .7rem; vertical-align: top; border-bottom: 1px solid var(--linia); background: var(--bialy); } tbody tr:nth-child(even) td { background: var(--tlo); } tbody tr:hover td { background: var(--akcent-tlo); } td:first-child { font-weight: 600; color: var(--tekst); } td[style*="right"] { white-space: nowrap; font-family: var(--f-tytul); font-weight: 600; color: var(--tekst); } tbody tr:last-child td { border-bottom: 2px solid var(--tekst); } td a { overflow-wrap: break-word; } .tabela-tytul { margin: 1.8rem 0 0; font: 700 1.05rem/1.3 var(--f-tytul); color: var(--tekst); } .tabela-zrodlo { margin-top: -1rem; font-size: .8rem; line-height: 1.45; color: var(--szary); } .tabela-zrodlo a { color: var(--szary); } .footnote { margin-top: 2.2rem; padding-top: .8rem; border-top: 1px solid var(--linia); font-size: .85rem; color: var(--szary); } .footnote hr { display: none; } .footnote a { overflow-wrap: anywhere; } .zrodla { margin-top: 2.4rem; padding: 1rem 1.1rem .4rem; background: var(--tlo); border-top: 3px solid var(--tekst); } .zrodla h2 { margin: 0 0 .6rem; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .06em; } .zrodla h2::before { display: none; } .zrodla ul { font-size: .86rem; line-height: 1.45; } .zrodla a { overflow-wrap: anywhere; } .odczyt { color: var(--szary); } .kolumna { margin-top: 1.5rem; display: grid; gap: 1.25rem; align-content: start; } .boczna { display: grid; gap: 1.25rem; } .kol-h { margin: 0; padding: .75rem 1rem; background: var(--tlo-2); border-bottom: 3px solid var(--akcent); font: 700 1.05rem/1.25 var(--f-tytul); color: var(--tekst); } .spis, .kol-dzialy { background: var(--bialy); } .spis ol, .kol-dzialy ul { list-style: none; margin: 0; padding: 0; } .spis ol { counter-reset: spis; } .spis li, .kol-dzialy li { margin: 0; border-bottom: 1px solid var(--linia); } .spis li:last-child, .kol-dzialy li:last-child { border-bottom: 0; } .spis a, .kol-dzialy a { display: flex; gap: .65rem; padding: .62rem 1rem; font-size: .93rem; line-height: 1.35; color: var(--tekst); text-decoration: none; } .spis a::before { counter-increment: spis; content: counter(spis); flex: none; min-width: 1.1rem; font: 700 .9rem/1.45 var(--f-tytul); color: var(--akcent); } .kol-dzialy a::before { content: ''; flex: none; width: .4rem; height: .4rem; margin-top: .5rem; border: solid var(--akcent); border-width: 2px 2px 0 0; transform: rotate(45deg); } .spis a:hover, .kol-dzialy a:hover { color: var(--akcent); background: var(--tlo); } .kol-dzialy a[aria-current="page"] { font-weight: 700; color: var(--akcent); box-shadow: inset 4px 0 var(--akcent); } .kol-ramka { padding: 1.1rem 1.1rem .4rem; background: var(--tekst); color: var(--stopka-tekst); font-size: .9rem; line-height: 1.5; } .kol-ramka-h { margin: 0 0 .5rem; font: 700 1.15rem/1.25 var(--f-tytul); color: var(--bialy); } .kol-ramka p { margin-bottom: .8rem; } .kol-ramka-link { display: inline-block; padding: .5rem .85rem; background: var(--akcent); color: var(--bialy); font: 600 .9rem/1.2 var(--f-tytul); text-decoration: none; } .kol-ramka-link:hover { background: var(--bialy); color: var(--akcent); } .strona-index .pas-okruszki, .strona-index .kolumna { display: none; } .strona-index h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; margin: 0; } .strona-index .art { background: transparent; margin: 0; padding: 1rem 0 0; } .strona-index .art-dalej > * { max-width: none; } .strona-index .art-dalej > h2::before { display: none; } .sekcja-h { margin: 0 0 1rem; border-bottom: 3px solid var(--akcent); font: 800 1.2rem/1 var(--f-tytul); text-transform: uppercase; letter-spacing: .04em; } .sekcja-h span { display: inline-block; padding: .55rem .9rem .5rem; background: var(--akcent); color: var(--bialy); } .sekcja-h a { color: inherit; text-decoration: none; } .czolo { display: grid; gap: 1.25rem; margin-bottom: 2.2rem; } .wiodacy { margin: 0; background: var(--tekst); } .wiodacy > a { display: block; position: relative; color: var(--bialy); text-decoration: none; } .wiodacy img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; } .wiodacy-podpis { padding: 1rem var(--margines) 1.2rem; border-left: 6px solid var(--akcent); } .wiodacy .dzial { color: var(--stopka-akcent); border-left: 0; padding-left: 0; } .wiodacy h2 { margin: 0 0 .5rem; font: 800 1.6rem/1.1 var(--f-tytul); color: var(--bialy); letter-spacing: -.01em; } .wiodacy-lead { margin: 0; font-size: .95rem; line-height: 1.5; color: var(--stopka-tekst); } .wiodacy-dalej { display: inline-block; margin-top: .7rem; font: 600 .85rem/1 var(--f-tytul); color: var(--stopka-akcent); text-transform: uppercase; letter-spacing: .06em; } .wiodacy > a:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .12em; } .wiodacy .fot { display: block; margin: 0; padding: .35rem var(--margines) .45rem; background: var(--bialy); text-align: right; } .aktualnie { background: var(--bialy); padding: 0 1rem .3rem; } .aktualnie .sekcja-h { margin: 0 -1rem .2rem; } .aktualnie ul { list-style: none; margin: 0; padding: 0; } .aktualnie li { margin: 0; border-bottom: 1px solid var(--linia); } .aktualnie li:last-child { border-bottom: 0; } .pozycja { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: .85rem; padding: .85rem 0; color: var(--tekst); text-decoration: none; } .pozycja img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; } .pozycja .dzial { margin-bottom: .3rem; border-left: 0; padding-left: 0; font-size: .7rem; } .pozycja-tytul { display: block; font: 700 1rem/1.25 var(--f-tytul); } .pozycja time, .kafel time { display: block; margin-top: .3rem; font-size: .76rem; color: var(--szary); } .pozycja:hover .pozycja-tytul { color: var(--akcent); text-decoration: underline; } .kafle-sekcja { margin-bottom: 2.2rem; } .kafle { display: grid; gap: 1rem; } .kafel { background: var(--bialy); margin: 0; } .kafel > a { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); color: var(--tekst); text-decoration: none; height: 100%; } .kafel img { width: 100%; height: 100%; min-height: 6.5rem; aspect-ratio: 4 / 3; object-fit: cover; } .kafel-tresc { display: block; padding: .75rem .9rem .9rem; } .kafel .dzial { margin-bottom: .35rem; border-left: 0; padding-left: 0; font-size: .7rem; } .kafel h3 { margin: 0; font: 700 1.05rem/1.22 var(--f-tytul); } .kafel-lead { display: none; margin: .45rem 0 0; font-size: .9rem; line-height: 1.5; color: var(--szary); } .kafel > a:hover h3 { color: var(--akcent); text-decoration: underline; } .dzialy-pas { display: grid; gap: 0; background: var(--bialy); margin-bottom: 2rem; } .dzial-kol { padding: 1rem 1rem .6rem; border-bottom: 1px solid var(--linia); } .dzial-kol h3 { margin: 0 0 .6rem; padding-top: .5rem; border-top: 4px solid var(--akcent); font-size: 1.05rem; } .dzial-kol h3 a { color: var(--tekst); text-decoration: none; } .dzial-kol h3 a:hover { color: var(--akcent); } .dzial-kol ul { list-style: none; padding: 0; margin: 0 0 .7rem; } .dzial-kol li { margin: 0; padding: .4rem 0; border-bottom: 1px solid var(--linia); font-size: .9rem; line-height: 1.35; } .dzial-kol li a { color: var(--tekst-2); text-decoration: none; } .dzial-kol li a:hover { color: var(--akcent); text-decoration: underline; } .dzial-wszystkie { display: inline-block; font: 700 .76rem/1.2 var(--f-tytul); text-transform: uppercase; letter-spacing: .06em; color: var(--tekst); } .zdjecia-autorzy { font-size: .74rem; line-height: 1.5; color: var(--szary); } .zdjecia-autorzy a { color: var(--szary); } .stopka { background: var(--stopka); color: var(--stopka-tekst); font-size: .9rem; line-height: 1.55; border-top: 6px solid var(--akcent); } .stopka-siatka { display: grid; gap: 1.8rem; padding-top: 2.2rem; padding-bottom: 2rem; } .stopka a { color: var(--bialy); } .stopka-logo { margin: 0 0 .7rem; font: 800 1.35rem/1 var(--f-tytul); text-transform: uppercase; color: var(--bialy); letter-spacing: .01em; } .stopka-logo span { font-weight: 500; color: var(--stopka-akcent); } .stopka-h { margin: 0 0 .7rem; font: 700 .8rem/1.3 var(--f-tytul); text-transform: uppercase; letter-spacing: .08em; color: var(--stopka-akcent); } .stopka ul { list-style: none; padding: 0; margin: 0; } .stopka li { margin: 0; padding: .35rem 0; border-bottom: 1px solid #34383C; } .stopka-kol a { text-decoration: none; } .stopka-kol a:hover { text-decoration: underline; } .stopka .drobne { font-size: .8rem; color: var(--stopka-szary); } .stopka-dol { border-top: 1px solid #34383C; font-size: .8rem; color: var(--stopka-szary); } .stopka-dol p { margin: 0; padding: .9rem 0; } .stopka-dol a { color: var(--stopka-szary); } @media (max-width: 47.99rem) { .menu .ram { padding: 0 var(--margines); } .menu ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; white-space: normal; border-left: 1px solid var(--linia); } .menu li, .menu li:first-child { border-left: 0; border-right: 1px solid var(--linia); border-bottom: 1px solid var(--linia); } .menu li:nth-last-child(-n+3):nth-child(3n+1), .menu li:nth-last-child(-n+3):nth-child(3n+1) ~ li { border-bottom: 0; } .menu a { padding: .6rem .35rem .55rem; font-size: .84rem; height: 100%; display: flex; align-items: center; justify-content: center; } table:has(tr > :nth-child(5)) { display: block; overflow-x: auto; width: calc(100% + 2 * var(--margines)); max-width: none; margin-left: calc(-1 * var(--margines)); margin-right: calc(-1 * var(--margines)); background: radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.18), transparent) right / .7rem 100% no-repeat scroll; } table:has(tr > :nth-child(5)) td, table:has(tr > :nth-child(5)) th { min-width: 8.5rem; } table:has(tr > :nth-child(5)) td[style*="right"], table:has(tr > :nth-child(5)) th[style*="right"] { min-width: 0; } table:has(tr > :nth-child(5)) :is(td, th):first-child { position: sticky; left: 0; z-index: 1; min-width: 7.5rem; max-width: 9rem; box-shadow: inset -1px 0 var(--linia); } table { font-size: .86rem; } th, td { padding-left: .5rem; padding-right: .5rem; } } @media (min-width: 48rem) { :root { --margines: 1.5rem; } body { font-size: 1.08rem; } .gora-zasada { display: block; text-align: right; } .winieta { padding-top: 1.3rem; padding-bottom: 1.3rem; } .logo { padding: .6rem 1.2rem .65rem .85rem; gap: .75rem; } .logo-znak { width: 1.9rem; } .logo-czad, .logo-wpolsce { font-size: 2.1rem; } .winieta-opis { display: block; text-align: right; } .menu .ram { padding: 0 var(--margines); } .menu ul { overflow: visible; } .menu li { flex: 1 1 auto; } .menu a { padding: 1rem 1.2rem .95rem; font-size: 1rem; } .art { margin: 0; padding: 1.8rem 2rem 2.4rem; } h1 { font-size: 2.55rem; } h2 { font-size: 1.7rem; } .lead { font-size: 1.2rem; } .kafle { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kafel > a { display: flex; flex-direction: column; } .kafel img { height: auto; aspect-ratio: 3 / 2; min-height: 0; } .kafel-tresc { padding: .9rem 1rem 1.1rem; } .kafel-lead { display: block; } .dzialy-pas { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dzial-kol { border-right: 1px solid var(--linia); } .stopka-siatka { grid-template-columns: 1.4fr 1fr 1.2fr; gap: 2.5rem; } .wiodacy h2 { font-size: 2rem; } } @media (min-width: 64rem) { :root { --margines: 2rem; } body { font-size: 1.125rem; } .uklad { display: grid; grid-template-columns: minmax(0, 1fr) 21rem; gap: 2rem; align-items: start; } .art { padding: 2.2rem 3rem 3rem; } .kolumna { margin-top: 0; } h1 { font-size: 3rem; } .strona-index .uklad { display: block; } .czolo { grid-template-columns: minmax(0, 1fr) 22.5rem; gap: 1.5rem; } .wiodacy { position: relative; display: flex; flex-direction: column; } .wiodacy > a { flex: 1 1 auto; } .wiodacy img { height: 100%; min-height: 30rem; aspect-ratio: auto; } .wiodacy-podpis { position: absolute; left: 0; bottom: 0; max-width: 64%; padding: 1.3rem 1.8rem 1.4rem 1.6rem; background: var(--tekst); } .wiodacy h2 { font-size: 2.35rem; } .wiodacy .fot { position: absolute; right: 0; top: 0; padding: .25rem .5rem; background: rgba(255,255,255,.88); } .aktualnie { padding: 0 1.2rem .3rem; } .aktualnie .sekcja-h { margin: 0 -1.2rem .2rem; } .kafle { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; } .dzialy-pas { grid-template-columns: repeat(4, minmax(0, 1fr)); } .dzial-kol { border-bottom: 0; padding: 1.1rem 1.2rem .8rem; } .dzial-kol:last-child { border-right: 0; } table { font-size: .93rem; } table:has(tr > :nth-child(5)) td:first-child { min-width: 11rem; } } @media (min-width: 110rem) { :root { --ram: 86rem; } .uklad { grid-template-columns: minmax(0, 1fr) 23rem; gap: 2.5rem; } }</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Czad w Polsce", "item": "https://czadwpolsce.pl/"}, {"@type": "ListItem", "position": 2, "name": "Czad w liczbach", "item": "https://czadwpolsce.pl/czad-w-liczbach/"}]}</script>
+</head>
+<body class="strona-czad-w-liczbach z-boczna">
+<a class="pomin" href="#tresc">Przejdź do treści</a>
+<header class="naglowek">
+  <div class="gora">
+    <div class="ram gora-ram">
+      <p class="wlasciciel">Serwis prowadzi Smoxy — producent czujników czadu, dymu i gazu · <a href="../o-serwisie/">O serwisie</a></p>
+      <p class="gora-zasada">Liczby z komunikatów PSP, urzędów wojewódzkich i gmin — zawsze z datą i źródłem</p>
+    </div>
+  </div>
+  <div class="ram winieta">
+    <a class="logo" href="../" aria-label="Czad w Polsce — strona główna">
+      <svg class="logo-znak" viewBox="0 0 40 48" aria-hidden="true" focusable="false"><path d="M8 46V22h11v24"/><path d="M5 16c3.5-4 8.5-4 12 0s8.5 4 12 0M11 7c3-3.4 7-3.4 10 0s7 3.4 10 0"/><path d="M23 46h14"/></svg>
+      <span class="logo-napis" aria-hidden="true"><span class="logo-czad">Czad</span><span class="logo-wpolsce">w&nbsp;Polsce</span></span>
+    </a>
+    <p class="winieta-opis"><strong>Serwis o&nbsp;tlenku węgla.</strong> Sezon czadowy w&nbsp;liczbach i&nbsp;programy darmowych czujek: kraj, województwa, gminy.</p>
+  </div>
+  <nav class="menu" aria-label="Działy serwisu"><div class="ram"><ul><li><a href="../">Start</a></li><li><a href="../czad-w-liczbach/" aria-current="page">Czad w liczbach</a></li><li><a href="../o-serwisie/">O serwisie</a></li></ul></div></nav>
+</header>
+<main id="tresc" class="tresc">
+  <div class="pas-okruszki"><div class="ram"><nav class="okruszki" aria-label="Jesteś tutaj"><a href="../">Strona główna</a><span aria-current="page">Czad w liczbach 2018–2025: zdarzenia, ranni i ofiary według danych KG PSP</span></nav></div></div>
+  <div class="ram uklad">
+    <article class="art">
+      <div class="art-glowa">
+        <h1>Czad w liczbach 2018–2025: zdarzenia, ranni i ofiary według danych KG PSP</h1>
+        <p class="meta">Stan danych i treść: <time datetime="2026-11-17">17 listopada 2026</time></p>
+        <p class="dzial">Dane · Komenda Główna PSP</p>
+
+<p class="lead">W latach 2018–2025 Państwowa Straż Pożarna odnotowała w Polsce 59 360 zdarzeń związanych z tlenkiem węgla. Rannych zostało 18 034 osób, zginęły 674. Poniżej liczby dla kraju, województw, powiatów i rodzajów budynków, prosto z arkusza Komendy Głównej PSP.</p>
+
+<figure class="zdjecie"><img src="../static/grafiki/domy-dym-zmierzch.webp" alt="Domy jednorodzinne o zmierzchu, z kominów unosi się dym" width="1400" height="934"><figcaption>Domy ogrzewane piecami o zmierzchu. <span class="fot">Fot. Stiopa, <a href="https://commons.wikimedia.org/wiki/File:A-zanieczyszczenie_powietrza.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></figcaption></figure>
+
+<dl>
+<dt>Źródło</dt>
+<dd>Komenda Główna PSP, pismo BKG-III.065.144.2026 z 17 listopada 2026 r.</dd>
+<dt>Zakres</dt>
+<dd>lata kalendarzowe 2018–2025; 16 województw, 380 powiatów i miast na prawach powiatu, 52 kategorie budynków</dd>
+<dt>Stan danych</dt>
+<dd>arkusz otrzymany 17 listopada 2026 r., 6 947 wierszy</dd>
+</dl>
+
+      </div>
+      <div class="art-dalej">
+        <h2 id="polska-rok-po-roku">Polska rok po roku</h2>
+<p class="tabela-tytul">Zdarzenia związane z tlenkiem węgla w Polsce, 2018–2025</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rok</th>
+<th style="text-align: right;">Zdarzenia</th>
+<th style="text-align: right;">Ranni</th>
+<th style="text-align: right;">Ofiary śmiertelne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2018</td>
+<td style="text-align: right;">7 332</td>
+<td style="text-align: right;">3 409</td>
+<td style="text-align: right;">71</td>
+</tr>
+<tr>
+<td style="text-align: left;">2019</td>
+<td style="text-align: right;">7 779</td>
+<td style="text-align: right;">2 917</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr>
+<td style="text-align: left;">2020</td>
+<td style="text-align: right;">6 334</td>
+<td style="text-align: right;">1 804</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td style="text-align: left;">2021</td>
+<td style="text-align: right;">6 434</td>
+<td style="text-align: right;">1 944</td>
+<td style="text-align: right;">79</td>
+</tr>
+<tr>
+<td style="text-align: left;">2022</td>
+<td style="text-align: right;">6 685</td>
+<td style="text-align: right;">1 664</td>
+<td style="text-align: right;">107</td>
+</tr>
+<tr>
+<td style="text-align: left;">2023</td>
+<td style="text-align: right;">7 327</td>
+<td style="text-align: right;">2 180</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr>
+<td style="text-align: left;">2024</td>
+<td style="text-align: right;">7 345</td>
+<td style="text-align: right;">1 998</td>
+<td style="text-align: right;">102</td>
+</tr>
+<tr>
+<td style="text-align: left;">2025</td>
+<td style="text-align: right;">10 124</td>
+<td style="text-align: right;">2 118</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2018–2025</strong></td>
+<td style="text-align: right;"><strong>59 360</strong></td>
+<td style="text-align: right;"><strong>18 034</strong></td>
+<td style="text-align: right;"><strong>674</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="tabela-zrodlo">Źródło: Komenda Główna PSP, pismo BKG-III.065.144.2026 z 17 listopada 2026 r., arkusz „Zdarzenia związane z tlenkiem węgla”. Obliczenia własne: sumy wierszy arkusza.</p>
+<p>Najwięcej zdarzeń arkusz pokazuje w 2025 r. (10 124), najmniej w 2020 r. (6 334). Najwięcej ofiar śmiertelnych było w 2023 r. (108), najmniej w 2020 r. (48). Arkusz nie podaje przyczyn zmian między latami i my ich nie dopisujemy.</p>
+<h2 id="wojewodztwa-zdarzenia">Województwa: zdarzenia</h2>
+<p class="tabela-tytul">Zdarzenia związane z tlenkiem węgla według województw, 2018–2025</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Województwo</th>
+<th style="text-align: right;">2018</th>
+<th style="text-align: right;">2019</th>
+<th style="text-align: right;">2020</th>
+<th style="text-align: right;">2021</th>
+<th style="text-align: right;">2022</th>
+<th style="text-align: right;">2023</th>
+<th style="text-align: right;">2024</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">Razem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">2 678</td>
+<td style="text-align: right;">2 868</td>
+<td style="text-align: right;">2 416</td>
+<td style="text-align: right;">2 595</td>
+<td style="text-align: right;">2 646</td>
+<td style="text-align: right;">2 790</td>
+<td style="text-align: right;">3 076</td>
+<td style="text-align: right;">4 196</td>
+<td style="text-align: right;"><strong>23 265</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">małopolskie</td>
+<td style="text-align: right;">606</td>
+<td style="text-align: right;">834</td>
+<td style="text-align: right;">717</td>
+<td style="text-align: right;">725</td>
+<td style="text-align: right;">820</td>
+<td style="text-align: right;">901</td>
+<td style="text-align: right;">975</td>
+<td style="text-align: right;">1 377</td>
+<td style="text-align: right;"><strong>6 955</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">dolnośląskie</td>
+<td style="text-align: right;">659</td>
+<td style="text-align: right;">667</td>
+<td style="text-align: right;">508</td>
+<td style="text-align: right;">512</td>
+<td style="text-align: right;">533</td>
+<td style="text-align: right;">615</td>
+<td style="text-align: right;">565</td>
+<td style="text-align: right;">739</td>
+<td style="text-align: right;"><strong>4 798</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">podkarpackie</td>
+<td style="text-align: right;">557</td>
+<td style="text-align: right;">713</td>
+<td style="text-align: right;">506</td>
+<td style="text-align: right;">408</td>
+<td style="text-align: right;">461</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">422</td>
+<td style="text-align: right;">615</td>
+<td style="text-align: right;"><strong>4 102</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">wielkopolskie</td>
+<td style="text-align: right;">316</td>
+<td style="text-align: right;">397</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">481</td>
+<td style="text-align: right;">540</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">419</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;"><strong>3 563</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">zachodniopomorskie</td>
+<td style="text-align: right;">333</td>
+<td style="text-align: right;">327</td>
+<td style="text-align: right;">255</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">232</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">319</td>
+<td style="text-align: right;">426</td>
+<td style="text-align: right;"><strong>2 536</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">mazowieckie</td>
+<td style="text-align: right;">291</td>
+<td style="text-align: right;">294</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">178</td>
+<td style="text-align: right;">203</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">399</td>
+<td style="text-align: right;"><strong>2 036</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">pomorskie</td>
+<td style="text-align: right;">322</td>
+<td style="text-align: right;">296</td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">199</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;"><strong>1 993</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">łódzkie</td>
+<td style="text-align: right;">208</td>
+<td style="text-align: right;">223</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">239</td>
+<td style="text-align: right;">267</td>
+<td style="text-align: right;">226</td>
+<td style="text-align: right;">261</td>
+<td style="text-align: right;"><strong>1 895</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">opolskie</td>
+<td style="text-align: right;">243</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">167</td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">258</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">286</td>
+<td style="text-align: right;"><strong>1 722</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">kujawsko-pomorskie</td>
+<td style="text-align: right;">284</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">161</td>
+<td style="text-align: right;">178</td>
+<td style="text-align: right;">158</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">236</td>
+<td style="text-align: right;"><strong>1 597</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">świętokrzyskie</td>
+<td style="text-align: right;">233</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">141</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">137</td>
+<td style="text-align: right;">163</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;"><strong>1 381</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">warmińsko-mazurskie</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">173</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;"><strong>1 165</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">lubuskie</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">221</td>
+<td style="text-align: right;"><strong>1 156</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">lubelskie</td>
+<td style="text-align: right;">155</td>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;"><strong>907</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">podlaskie</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;"><strong>289</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polska</strong></td>
+<td style="text-align: right;"><strong>7 332</strong></td>
+<td style="text-align: right;"><strong>7 779</strong></td>
+<td style="text-align: right;"><strong>6 334</strong></td>
+<td style="text-align: right;"><strong>6 434</strong></td>
+<td style="text-align: right;"><strong>6 685</strong></td>
+<td style="text-align: right;"><strong>7 327</strong></td>
+<td style="text-align: right;"><strong>7 345</strong></td>
+<td style="text-align: right;"><strong>10 124</strong></td>
+<td style="text-align: right;"><strong>59 360</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="tabela-zrodlo">Źródło: Komenda Główna PSP, pismo BKG-III.065.144.2026 z 17 listopada 2026 r., arkusz „Zdarzenia związane z tlenkiem węgla”. Obliczenia własne: sumy wierszy arkusza.</p>
+<h2 id="wojewodztwa-ofiary-smiertelne">Województwa: ofiary śmiertelne</h2>
+<p class="tabela-tytul">Ofiary śmiertelne zdarzeń związanych z tlenkiem węgla według województw, 2018–2025</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Województwo</th>
+<th style="text-align: right;">2018</th>
+<th style="text-align: right;">2019</th>
+<th style="text-align: right;">2020</th>
+<th style="text-align: right;">2021</th>
+<th style="text-align: right;">2022</th>
+<th style="text-align: right;">2023</th>
+<th style="text-align: right;">2024</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">Razem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;"><strong>196</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">małopolskie</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;"><strong>67</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">podkarpackie</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;"><strong>63</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">wielkopolskie</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;"><strong>49</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">mazowieckie</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;"><strong>48</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">dolnośląskie</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>44</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">łódzkie</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;"><strong>36</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">zachodniopomorskie</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;"><strong>35</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">pomorskie</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;"><strong>28</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">kujawsko-pomorskie</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>24</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">warmińsko-mazurskie</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;"><strong>20</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">opolskie</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;"><strong>18</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">lubelskie</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;"><strong>15</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">świętokrzyskie</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;"><strong>15</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">lubuskie</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;"><strong>12</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">podlaskie</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>4</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polska</strong></td>
+<td style="text-align: right;"><strong>71</strong></td>
+<td style="text-align: right;"><strong>59</strong></td>
+<td style="text-align: right;"><strong>48</strong></td>
+<td style="text-align: right;"><strong>79</strong></td>
+<td style="text-align: right;"><strong>107</strong></td>
+<td style="text-align: right;"><strong>108</strong></td>
+<td style="text-align: right;"><strong>102</strong></td>
+<td style="text-align: right;"><strong>100</strong></td>
+<td style="text-align: right;"><strong>674</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="tabela-zrodlo">Źródło: Komenda Główna PSP, pismo BKG-III.065.144.2026 z 17 listopada 2026 r., arkusz „Zdarzenia związane z tlenkiem węgla”. Obliczenia własne: sumy wierszy arkusza.</p>
+<p>Liczby nie są przeliczone na mieszkańca. Województwo z większą liczbą ludności i mieszkań ma zwykle więcej zdarzeń, więc sama kolejność w tabeli nie mówi, gdzie ryzyko jest największe.</p>
+<h2 id="rodzaje-budynkow">Rodzaje budynków</h2>
+<p class="tabela-tytul">Zdarzenia według rodzaju budynku, suma lat 2018–2025</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rodzaj budynku (nazwa z arkusza KG PSP)</th>
+<th style="text-align: right;">Zdarzenia</th>
+<th style="text-align: right;">Ranni</th>
+<th style="text-align: right;">Ofiary śmiertelne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Wielorodzinne</td>
+<td style="text-align: right;">44 934</td>
+<td style="text-align: right;">12 402</td>
+<td style="text-align: right;">346</td>
+</tr>
+<tr>
+<td style="text-align: left;">Jednorodzinne, w tym bliźniaki, zabudowa szeregowa</td>
+<td style="text-align: right;">9 852</td>
+<td style="text-align: right;">4 882</td>
+<td style="text-align: right;">253</td>
+</tr>
+<tr>
+<td style="text-align: left;">brak kategorii</td>
+<td style="text-align: right;">2 931</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Budynki mieszkalne w gospodarstwach rolnych</td>
+<td style="text-align: right;">454</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td style="text-align: left;">Handlowo-usługowe, w szczególności sklepy, domy towarowe, lokale gastronomiczne, hurtownie, zakłady usługowe</td>
+<td style="text-align: right;">235</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">Oświaty i nauki, w szczególności budynki dydaktyczne, szkoły, przedszkola</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">pozostałe kategorie (46)</td>
+<td style="text-align: right;">853</td>
+<td style="text-align: right;">412</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Razem</strong></td>
+<td style="text-align: right;"><strong>59 360</strong></td>
+<td style="text-align: right;"><strong>18 034</strong></td>
+<td style="text-align: right;"><strong>674</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="tabela-zrodlo">Źródło: Komenda Główna PSP, pismo BKG-III.065.144.2026 z 17 listopada 2026 r., arkusz „Zdarzenia związane z tlenkiem węgla”. Obliczenia własne: sumy wierszy arkusza.</p>
+<p>Nazwy kategorii przepisaliśmy z arkusza bez zmian. „Brak kategorii” to także kategoria z arkusza, a nie nasz dopisek.</p>
+<h2 id="powiaty-z-najwieksza-liczba-zdarzen">Powiaty z największą liczbą zdarzeń</h2>
+<p class="tabela-tytul">20 powiatów i miast z największą liczbą zdarzeń, suma lat 2018–2025</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Powiat albo miasto</th>
+<th style="text-align: left;">Województwo</th>
+<th style="text-align: right;">Zdarzenia</th>
+<th style="text-align: right;">Ranni</th>
+<th style="text-align: right;">Ofiary śmiertelne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Kraków</td>
+<td style="text-align: left;">małopolskie</td>
+<td style="text-align: right;">3 269</td>
+<td style="text-align: right;">374</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;">Katowice</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">2 394</td>
+<td style="text-align: right;">439</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: left;">Częstochowa</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">2 178</td>
+<td style="text-align: right;">361</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bielsko-Biała</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">1 804</td>
+<td style="text-align: right;">264</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bytom</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">1 437</td>
+<td style="text-align: right;">397</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Jastrzębie-Zdrój</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">1 404</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ruda Śląska</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">1 193</td>
+<td style="text-align: right;">346</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tychy</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">1 186</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sosnowiec</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">1 091</td>
+<td style="text-align: right;">235</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wrocław</td>
+<td style="text-align: left;">dolnośląskie</td>
+<td style="text-align: right;">1 014</td>
+<td style="text-align: right;">239</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chorzów</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">981</td>
+<td style="text-align: right;">324</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">Zabrze</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">931</td>
+<td style="text-align: right;">258</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gliwice</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">788</td>
+<td style="text-align: right;">279</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rybnik</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">752</td>
+<td style="text-align: right;">171</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">oświęcimski</td>
+<td style="text-align: left;">małopolskie</td>
+<td style="text-align: right;">717</td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Siemianowice Śląskie</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">671</td>
+<td style="text-align: right;">290</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Łódź</td>
+<td style="text-align: left;">łódzkie</td>
+<td style="text-align: right;">665</td>
+<td style="text-align: right;">276</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;">Żory</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">654</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Świętochłowice</td>
+<td style="text-align: left;">śląskie</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Kielce</td>
+<td style="text-align: left;">świętokrzyskie</td>
+<td style="text-align: right;">624</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<p class="tabela-zrodlo">Źródło: Komenda Główna PSP, pismo BKG-III.065.144.2026 z 17 listopada 2026 r., arkusz „Zdarzenia związane z tlenkiem węgla”. Obliczenia własne: sumy wierszy arkusza.</p>
+<p>Dane KG PSP obejmują wszystkie 380 powiatów i miast, rok po roku i z podziałem na rodzaj budynku. Liczby dla konkretnego powiatu podamy na prośbę wysłaną przez stronę <a href="../o-serwisie/">O serwisie</a>.</p>
+<h2 id="jak-czytac-te-liczby">Jak czytać te liczby</h2>
+<ol>
+<li><strong>Lata kalendarzowe, nie sezony grzewcze.</strong> Komunikaty straży zwykle liczą sezon od października do marca. Tych liczb nie da się więc wprost zestawić z komunikatami o „sezonie”.</li>
+<li><strong>Nazwy kolumn są z arkusza:</strong> liczba zdarzeń, ranni, ofiary śmiertelne. Arkusz nie zawiera definicji tych pojęć, dlatego ich nie rozwijamy.</li>
+<li><strong>Liczba zdarzeń to nie liczba poszkodowanych.</strong> Przy tej samej liczbie zdarzeń arkusz pokazuje w jednych powiatach wielu rannych, a w innych żadnego.</li>
+<li><strong>Bez przeliczenia na mieszkańców.</strong> Do porównań między powiatami potrzebna jest liczba ludności albo mieszkań z innego źródła.</li>
+<li><strong>Sumy liczymy sami</strong> z wierszy arkusza. Suma dla kraju, województw, powiatów i rodzajów budynków daje ten sam wynik: 59 360 zdarzeń, 18 034 rannych, 674 ofiar śmiertelnych.</li>
+</ol>
+<h2 id="skad-sa-dane">Skąd są dane</h2>
+<p>Dane przekazała Komenda Główna Państwowej Straży Pożarnej w piśmie z 17 listopada 2026 r. Jest to odpowiedź na wniosek o udostępnienie informacji publicznej z 4 listopada 2026 r., który złożył właściciel serwisu. Strona instytucji: <a href="https://www.gov.pl/web/kgpsp" rel="external">Komenda Główna PSP</a>.</p>
+<p>Dane można cytować z podaniem źródła: Komenda Główna PSP, a przy korzystaniu z naszych tabel także adresu tej strony. Błąd w przepisaniu zgłosisz przez stronę <a href="../o-serwisie/">O serwisie</a>.</p>
+        <section class="zrodla" aria-labelledby="zrodla-h"><h2 id="zrodla-h">Źródła</h2><ul><li><a href="https://www.gov.pl/web/kgpsp" rel="external">https://www.gov.pl/web/kgpsp</a></li></ul></section>
+      </div>
+    </article>
+    <div class="kolumna">
+      <aside class="boczna" aria-label="Spis treści i zgłoszenia">
+<!--spis--><nav class="spis" aria-labelledby="spis-h"><h2 id="spis-h" class="kol-h">Na tej stronie</h2><ol><li><a href="#polska-rok-po-roku">Polska rok po roku</a></li><li><a href="#wojewodztwa-zdarzenia">Województwa: zdarzenia</a></li><li><a href="#wojewodztwa-ofiary-smiertelne">Województwa: ofiary śmiertelne</a></li><li><a href="#rodzaje-budynkow">Rodzaje budynków</a></li><li><a href="#powiaty-z-najwieksza-liczba-zdarzen">Powiaty z największą liczbą zdarzeń</a></li><li><a href="#jak-czytac-te-liczby">Jak czytać te liczby</a></li><li><a href="#skad-sa-dane">Skąd są dane</a></li><li><a href="#zrodla-h">Źródła</a></li></ol></nav><!--/spis-->
+<section class="kol-ramka" aria-labelledby="zglos-h"><h2 id="zglos-h" class="kol-ramka-h">Twoja gmina rozdaje czujki?</h2><p>Wyślij adres komunikatu urzędu albo straży. Program trafia do rejestru dopiero z&nbsp;tego komunikatu, z&nbsp;datą.</p><p><a class="kol-ramka-link" href="../o-serwisie/#jak-zglosic-program">Jak zgłosić program</a></p></section>
+</aside>
+
+      <nav class="kol-dzialy" aria-labelledby="kol-dzialy-h">
+        <h2 id="kol-dzialy-h" class="kol-h">Działy serwisu</h2>
+        <ul><li><a href="../">Start</a></li><li><a href="../czad-w-liczbach/" aria-current="page">Czad w liczbach</a></li><li><a href="../o-serwisie/">O serwisie</a></li></ul>
+      </nav>
+    </div>
+  </div>
+</main>
+<footer class="stopka">
+  <div class="ram stopka-siatka">
+    <section class="stopka-marka" aria-labelledby="stopka-o">
+      <h2 id="stopka-o" class="stopka-logo">Czad <span>w&nbsp;Polsce</span></h2>
+      <p>Serwis prowadzi <a href="https://smoxy.pl/?utm_source=czadwpolsce&amp;utm_medium=referral&amp;utm_campaign=stopka">Smoxy</a> — producent czujników czadu, dymu i gazu.</p>
+      <p class="drobne">Serwis zbiera dane publikowane przez Państwową Straż Pożarną, urzędy wojewódzkie i&nbsp;gminy. Nie sprzedaje i&nbsp;nie porównuje produktów. Wiążący jest zawsze komunikat źródłowy pod podanym adresem.</p>
+    </section>
+    <nav class="stopka-kol" aria-labelledby="stopka-dzialy">
+      <h2 id="stopka-dzialy" class="stopka-h">Działy</h2>
+      <ul><li><a href="../">Start</a></li><li><a href="../czad-w-liczbach/">Czad w liczbach</a></li><li><a href="../o-serwisie/">O serwisie</a></li></ul>
+    </nav>
+    <section class="stopka-kol" aria-labelledby="stopka-zasady">
+      <h2 id="stopka-zasady" class="stopka-h">Zasady danych</h2>
+      <ul class="stopka-zasady">
+        <li>Liczba bez źródła urzędowego nie trafia na stronę.</li>
+        <li>Przy każdej liczbie: kto ją podał i&nbsp;kiedy.</li>
+        <li>Dane częściowe są oznaczone jako częściowe.</li>
+        <li>Zdjęcia na wolnych licencjach, z&nbsp;autorem przy zdjęciu.</li>
+      </ul>
+    </section>
+  </div>
+  <div class="stopka-dol"><div class="ram"><p>© 2026 Smoxy · <a href="../o-serwisie/">O serwisie i&nbsp;kontakt</a></p></div></div>
+</footer>
+
+</body>
+</html>
